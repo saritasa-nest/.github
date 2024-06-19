@@ -6,9 +6,9 @@ mergeable:
     validate:
       - do: title
         must_exclude:
-         regex: '\bwip\b'
-         regex_flag: 'i' # case-insensitive (it is a default, to disable use 'none')
-         message: 'Title must exclude "wip"'
+          regex: '\bwip\b'
+          regex_flag: 'i' # case-insensitive (it is a default, to disable use 'none')
+          message: 'Title must exclude "wip"'
         begins_with:
           match: ['doc:', 'feat:', 'fix:']
           message: 'Title must begin with "doc:", "feat:", or "fix:"'
