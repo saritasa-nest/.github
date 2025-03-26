@@ -30,6 +30,11 @@ mergeable:
   # CHANGELOG.md is required in the PR
   - when: pull_request.*
     name: 'Сhecking for the presence of the CHANGELOG.md file'
+    filter:
+      - do: author
+        must_exclude:
+            regex: '^darliiin$'
+            message: 'Skipping CHANGELOG.md check for Renovate PRs'
     validate:
       - do: changeset
         no_empty:
